@@ -1,0 +1,82 @@
+<html>
+<head>
+	<title> predicting house rent</title>
+	<link rel="alternate" href="house_rent_web.html" hreflang="en-gb">
+	<style>
+		#submit{  
+    width: 200px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    background-color: #f44336;
+  
+}  
+	</style>
+</head>
+<body bgcolor="lightgrey">
+
+	<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<center>
+	<br>
+	<h1>House Rent Prediction </h1>
+    <br>
+	<form method="POST" action="{{ url_for('home1')}}">
+		
+	BHK:<input type="text" name="bh" placeholder="enter BHK" required>
+	<br><br>
+	SIZE:<input type="text" name="sz" placeholder="enter size" required>
+	<br><br>
+    AREA TYPE:<select name="at">
+			<option value=2>Super Area</option>
+			<option value=1>Carpet Area</option>
+			<option value=0>Built Area</option>
+		</select>
+	<br><br>
+	CITY:<select name="ct">
+			<option value=5>Mumbai</option>
+			<option value=1>Chennai</option>
+			<option value=0>Bangalore</option>
+			<option value=3>Hyderabad</option>
+			<option value=2>Delhi</option>
+			<option value=4>Kolkata</option>
+		</select>
+	<br><br>
+
+	Furnishing Status:<select name="fs">
+			<option value=1>Semi-Furnished</option>
+			<option value=2>Unfurnished</option>
+			<option value=0>Furnished</option>
+		</select>
+	<br><br>
+
+	Tenant Preferred:<select name="tp">
+			<option value=1>Bachelors/Family</option>
+			<option value=0>Bachelors</option>
+			<option value=2>Family</option>
+		</select>
+
+	<br><br>
+
+
+	Point of Contact:<select name="poc">
+			<option value=2>Contact Owner</option>
+			<option value=0>Contact Agent</option>
+			<option value=1>Contact Builder</option>
+		</select>
+
+	<br><br>
+	<input type="submit" id="submit" value="SUBMIT">
+	</form>
+	
+</center>
+</body>
+</html>
